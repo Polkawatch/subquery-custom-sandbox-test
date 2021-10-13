@@ -1,0 +1,19 @@
+specVersion: 0.0.1
+description: Just Testing
+repository: ''
+schema: ./schema.graphql
+network:
+  endpoint: >-
+    wss://polkadot.api.onfinality.io/ws?apikey=ec9800c1-55be-4ffc-bb9e-f80233f4e1b3
+  dictionary: https://api.subquery.network/sq/subquery/dictionary-polkadot
+dataSources:
+  - name: main
+    kind: substrate/Runtime
+    startBlock: 1
+    mapping:
+      handlers:
+        - handler: handleTransfer
+          kind: substrate/EventHandler
+          filter:
+            module: balances
+            method: Transfer
