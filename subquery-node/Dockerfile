@@ -1,4 +1,4 @@
-FROM onfinality/subql-node:latest
+FROM onfinality/subql-node:v0.22.0
 
 RUN npm install -g maxmind geolite2-redist \
     && node /usr/local/lib/node_modules/geolite2-redist/scripts/preload-all.js

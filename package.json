@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "geolite2-redist": "^2.0.4",
-    "maxmind": "^4.3.2"
+    "maxmind": "^4.3.2",
+    "yarn": "^1.22.15"
   }
 }
